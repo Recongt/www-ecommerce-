@@ -35,7 +35,7 @@
 				echo stripslashes( wootique_get_woo_option( 'woo_footer_left_text' ) );
 
 		} else { ?>
-			<p><?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?>. <?php _e( 'Adam Czyżyński.', 'woothemes' ); ?></p>
+			<p><?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?>. <?php _e( 'All Rights Reserved.', 'woothemes' ); ?></p>
 		<?php } ?>
 		</div>
 
@@ -45,7 +45,7 @@
 			echo stripslashes( wootique_get_woo_option ( 'woo_footer_right_text' ) );
 
 		} else { ?>
-			<p>   <a href="<?php echo ( wootique_get_woo_option( 'woo_footer_aff_link' ) ? esc_url( wootique_get_woo_option( 'woo_footer_aff_link' ) ) : 'http://www.woothemes.com' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logotype.png" width="120" height="35" alt="Woo Themes" /></a></p>
+			<p><?php _e( 'Powered by', 'woothemes' ); ?> <a href="http://www.wordpress.org">WordPress</a>. <?php _e( 'Designed by', 'woothemes' ); ?> <a href="<?php echo ( wootique_get_woo_option( 'woo_footer_aff_link' ) ? esc_url( wootique_get_woo_option( 'woo_footer_aff_link' ) ) : 'http://www.woothemes.com' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/woothemes.png" width="74" height="19" alt="Woo Themes" /></a></p>
 		<?php } ?>
 		</div>
 

@@ -45,7 +45,7 @@ function wootique_header_search() {
 
     	<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(); ?>">
 			<label class="screen-reader-text" for="s"><?php _e('Search for:', 'woothemes'); ?></label>
-			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s"  class="field s" placeholder="<?php _e('Szukaj produktów', 'woothemes'); ?>" />
+			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s"  class="field s" placeholder="<?php _e('Search for products', 'woothemes'); ?>" />
 			<input type="image" class="submit btn" name="submit" value="<?php _e('Search', 'woothemes'); ?>" src="<?php echo get_template_directory_uri(); ?>/images/ico-search.png">
 			<?php if ( wootique_get_woo_option( 'woo_header_search_scope' ) == 'products' ) { echo '<input type="hidden" name="post_type" value="product" />'; } else { echo '<input type="hidden" name="post_type" value="post" />'; } ?>
 		</form>
@@ -192,7 +192,7 @@ function woocommerce_cart_link() {
 	global $woocommerce;
 	?>
     	<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="'<?php _e( 'View your shopping cart', 'woothemes' ); ?>'" class="cart-button">
-			<span><?php echo sprintf(_n( '%d przedmiot &ndash; ', '%d przedmiotów &ndash; ', $woocommerce->cart->get_cart_contents_count(), 'woothemes'), $woocommerce->cart->get_cart_contents_count()) . $woocommerce->cart->get_cart_total(); ?></span>
+			<span><?php echo sprintf(_n( '%d item &ndash; ', '%d items &ndash; ', $woocommerce->cart->get_cart_contents_count(), 'woothemes'), $woocommerce->cart->get_cart_contents_count()) . $woocommerce->cart->get_cart_total(); ?></span>
 		</a>
 	<?php
 }
